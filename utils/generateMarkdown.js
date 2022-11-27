@@ -4,7 +4,7 @@ function renderLicenseBadge(license) {
   if (license !== 'none') {
     // started with multiple if and else statements for different liscense badges, using ${liscense}
     // allows deletion of all that repeat code.
-    return `[GitHub Liscense] (https://img.shields.io/badge/license-${license}-blue.svg)`
+    return `[GitHub Liscense](https://img.shields.io/badge/license-${license}-blue.svg)`
   } else {
     return '';
   }
@@ -13,21 +13,31 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-
+  if (license !== 'none') {
+    return `[Liscense](#liscense)`
+  } else {
+    return '';
+  }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-
+  if (license !== 'none') {
+    return `## Liscense
+  
+  ${license}`
+  } else {
+    return '';
+  }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  # ${data.title}
+  # ${data.projectName}
 
-  ${renderLicenseBadge(data.liscense)}
+  ${renderLicenseBadge(data.license)}
 
   ## Description
   ${data.description}
@@ -36,15 +46,15 @@ function generateMarkdown(data) {
   - [Installatoin](#installation)
   - [Usage](#usage)
   - [Contribution](#contribution)
-  - [Test](#test)
+  - [Tests](#tests)
 
-  ${renderLicenseLink(data.liscense)}
+  ${renderLicenseLink(data.license)}
 
   ## Installation
   ${data.installation}
 
   ## Usage
-  ![Alt text](${data.usage})
+ (${data.usage})
 
   ## Contribution 
   [${data.contribution}](https://github.com/${data.contribution})
@@ -52,7 +62,7 @@ function generateMarkdown(data) {
   ## Tests
   ${data.test}
 
-  ${renderLicenseSection(data.liscense)}
+  ${renderLicenseSection(data.license)}
 `;
 }
 

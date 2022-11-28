@@ -55,13 +55,13 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Enter any information the user may need to know about this repository: '
+        message: 'Enter any information the user may need to know about the use this application: '
     },
 
-    // contribution guidelines
+    // Contributing guidelines
     {
         type: 'input',
-        name: 'contribution',
+        name: 'contributing',
         message: 'Enter any information the user may need to know about contributing to this repository: '
     },
 
@@ -69,7 +69,7 @@ const questions = [
     {
         type: 'input',
         name: 'test',
-        message: 'Which command should be used to initiate test: ',
+        message: 'What are instructions for testing this application: ',
     }
 
 ];

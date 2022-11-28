@@ -55,14 +55,14 @@ function renderLicenseLink(license) {
   } else {
     return link = '';
   }
-  return "License Link: " + link;
+  return license + " License Link: " + link;
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== 'None') {
-    return '## License';
+    return '## License: ' + license;
   } else {
     return '';
   }
@@ -72,31 +72,60 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
   # ${data.projectName}
+  \n
 
   ${renderLicenseSection(data.license)}
-  \n${renderLicenseBadge(data.license)}
-  \n ${renderLicenseLink(data.license)}
+
+  \n
+
+  ${renderLicenseBadge(data.license)}
+
+  \n 
+
+
+  ${renderLicenseLink(data.license)}
+
+  \n 
 
   ## Description
   ${data.description}
 
+  \n 
+
   ## Table of Contents
   - [Installatoin](#installation)
   - [Usage](#usage)
-  - [Contribution](#contribution)
+  - [Contributing](#contributing)
   - [Tests](#tests)
+  - [Questions](#questions)
   
+  \n 
+
   ## Installation
+  \n
+  To install dependencies, use this command in the terminal: 
+  \n
   ${data.installation}
+
+  \n 
 
   ## Usage
  ${data.usage}
 
-  ## Contribution 
-  ${data.contribution}
+ \n 
+
+  ## Contributing
+  \n
+  If you would like to contribute to this repository, follow these instructions: 
+  \n
+  ${data.Contributing}
+
+  \n 
 
   ## Tests
   ${data.test}
+
+  \n 
 
   ## Questions
   Any questions about this project please contact the creator ${data.username} at:

@@ -1,32 +1,68 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+
 function renderLicenseBadge(license) {
-  if (license !== 'none') {
-    // started with multiple if and else statements for different liscense badges, using ${liscense}
-    // allows deletion of all that repeat code.
-    return `[GitHub Liscense](https://img.shields.io/badge/license-${license}-blue.svg)`
+
+  let badge = '';
+  // created a if statement for each badge option to display to return the padge to the markdown
+  if (license === 'Apache') {
+    badge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+  } else if (license === 'Boost') {
+    badge = '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)';
+  } else if (license === 'BSD 2') {
+    badge = '[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)';
+  } else if (license === 'BSD 3') {
+    badge = '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)';
+  } else if (license === 'IBM') {
+    badge = '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)';
+  } else if (license === 'ISC') {
+    badge = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)';
+  } else if (license === 'MIT') {
+    badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+  } else if (license === 'Mozilla') {
+    badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
+  } else if (license === 'Perl') {
+    badge = '[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)';
   } else {
-    return '';
+    badge = '';
   }
+  return badge;
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license !== 'none') {
-    return `[Liscense](#liscense)`
+  let link = '';
+  // created a if statement for each badge that if there was a link it would generate a link to that liscense on markdown
+  if (license === 'Apache') {
+    link = 'https://opensource.org/licenses/Apache-2.0';
+  } else if (license === 'Boost') {
+    link = 'https://www.boost.org/LICENSE_1_0.txt';
+  } else if (license === 'BSD 2') {
+    link = 'https://opensource.org/licenses/BSD-2-Clause';
+  } else if (license === 'BSD 3') {
+    link = 'https://opensource.org/licenses/BSD-3-Clause';
+  } else if (license === 'IBM') {
+    link = 'https://opensource.org/licenses/IPL-1.0';
+  } else if (license === 'ISC') {
+    link = 'https://opensource.org/licenses/ISC';
+  } else if (license === 'MIT') {
+    link = 'https://opensource.org/licenses/MIT';
+  } else if (license === 'Mozilla') {
+    link = 'https://opensource.org/licenses/MPL-2.0';
+  } else if (license === 'Perl') {
+    link = 'https://opensource.org/licenses/Artistic-2.0';
   } else {
-    return '';
+    return link = '';
   }
+  return "License Link: " + link;
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license !== 'none') {
-    return `## Liscense
-  
-  ${license}`
+  if (license !== 'None') {
+    return '## License';
   } else {
     return '';
   }
@@ -37,7 +73,9 @@ function generateMarkdown(data) {
   return `
   # ${data.projectName}
 
-  ${renderLicenseBadge(data.license)}
+  ${renderLicenseSection(data.license)}
+  \n${renderLicenseBadge(data.license)}
+  \n ${renderLicenseLink(data.license)}
 
   ## Description
   ${data.description}
@@ -47,22 +85,22 @@ function generateMarkdown(data) {
   - [Usage](#usage)
   - [Contribution](#contribution)
   - [Tests](#tests)
-
-  ${renderLicenseLink(data.license)}
-
+  
   ## Installation
   ${data.installation}
 
   ## Usage
- (${data.usage})
+ ${data.usage}
 
   ## Contribution 
-  [${data.contribution}](https://github.com/${data.contribution})
+  ${data.contribution}
 
   ## Tests
   ${data.test}
 
-  ${renderLicenseSection(data.license)}
+  ## Questions
+  Any questions about this project please contact the creator ${data.username} at:
+  ${data.email}
 `;
 }
 

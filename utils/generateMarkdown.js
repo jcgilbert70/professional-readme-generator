@@ -72,18 +72,10 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
   # ${data.projectName}
-  \n
-
-  ${renderLicenseSection(data.license)}
 
   \n
 
   ${renderLicenseBadge(data.license)}
-
-  \n 
-
-
-  ${renderLicenseLink(data.license)}
 
   \n 
 
@@ -130,6 +122,16 @@ function generateMarkdown(data) {
   ## Questions
   Any questions about this project please contact the creator ${data.username} at:
   ${data.email}
+
+  \n
+
+  ${renderLicenseSection(data.license)}
+
+  \n 
+  
+  ${renderLicenseLink(data.license)}
+
+  
 `;
 }
 

@@ -93,7 +93,7 @@ function init() {
             const dataObject = generateMarkDown(data);
 
             // file name, then Data to be added to file
-            writeToFile("testREADME.md", dataObject);
+            writeToFile(data.projectName+"README.md", dataObject);
         });
 }
 

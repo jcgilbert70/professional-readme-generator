@@ -11,6 +11,9 @@
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [Questions](#questions)
+  - [Screenshots](#screenshots)
+  - [Repository](#repository)
+  - [Video-Link](#video-link)
   
   ## Installation
   
@@ -38,14 +41,14 @@
   ## Screenshots
 
   <img src="assets/img/prompt-screenshot.png" width="600">
-  <img src="assets/img/new-README-file.png" width="300">
-  <img src="assets/img/README-screenshot.png" width="300">
+  
+  <img src="assets/img/README-screenshot.png" width="600">
 
   ## Repository
 
   https://github.com/jcgilbert70/professional-readme-generator.git
 
-  ## Video Link
+  ## Video-Link
 
   https://app.castify.com/view/f01823c9-29d9-4873-ba10-48e11df86e45
 

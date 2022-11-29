@@ -48,14 +48,14 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Enter information on how to install dependancies: ',
+        message: 'Enter information on how to install: ',
     },
 
     // usage information
     {
         type: 'input',
         name: 'usage',
-        message: 'Enter any information the user may need to know about the use this application: '
+        message: 'Enter any information the user may need to know about the usage of this application: '
     },
 
     // Contributing guidelines
@@ -69,7 +69,7 @@ const questions = [
     {
         type: 'input',
         name: 'test',
-        message: 'What are instructions for testing this application?: ',
+        message: 'Enter any instructions for testing this application: ',
     }
 
 ];

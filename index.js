@@ -25,7 +25,7 @@ const questions = [
     {
         type: 'input',
         name: 'projectName',
-        message: 'Enter your Project name: '
+        message: 'Enter your Project name, use standard file naming practices: '
     },
 
     // enter description

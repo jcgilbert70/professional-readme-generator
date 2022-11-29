@@ -1,16 +1,16 @@
 
-  # fileNameTest
+  # VidTest
 
   
 
 
-  [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   
  
 
   ## Description
-  testing
+  this is a dest for my demo video
 
   
  
@@ -21,6 +21,7 @@
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
+  - [License](#license)
   
   
  
@@ -37,7 +38,7 @@
  
 
   ## Usage
- a;lasf ;a a;ls;sdaa llkalkaa;ls;lk lkj;sa  lkj lk; j ljk; lk; l;h ;l  kj;llkj; l;k lk;  j ;l  ;j ;lkj ;j 
+ Test
 
  
  
@@ -54,7 +55,7 @@
  
 
   ## Tests
-  lk;j ;lkj ;lk ;lk ;l ;ljk ; lkj jl
+  Test
 
   
  
@@ -62,15 +63,18 @@
   ## Questions
   Any questions about this project please contact the creator jcgilbert70 at:
   gilby@gmail.com
+  
+
+  Check out other repositories by this creator at: https://github.com/jcgilbert70
 
   
 
 
-  ## License: BSD 2
+  ## License: MIT
 
   
  
-  
-  BSD 2 License Link: https://opensource.org/licenses/BSD-2-Clause
+
+  MIT License Link: https://opensource.org/licenses/MIT
 
   

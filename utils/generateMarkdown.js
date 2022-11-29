@@ -95,16 +95,19 @@ function generateMarkdown(data) {
 
   ## Installation
   \n
-  To install dependencies, use this command in the terminal: 
+  Information on installation: 
   \n
   ${data.installation}
 
   \n 
-
+  
   ## Usage
+  \n 
+  User Information: 
  ${data.usage}
 
  \n 
+
 
   ## Contributing
   \n
@@ -118,17 +121,18 @@ function generateMarkdown(data) {
   ${data.test}
 
   \n 
+ 
 
   ## Questions
   Any questions about this project please contact the creator ${data.username} at:
   ${data.email}
+  \n
+  Check out other repositories by this creator at: https://github.com/${data.username}
 
   \n
 
   ${renderLicenseSection(data.license)}
-
   \n 
-  
   ${renderLicenseLink(data.license)}
 
   

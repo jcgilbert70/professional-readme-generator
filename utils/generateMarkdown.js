@@ -72,65 +72,45 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
   # ${data.projectName}
-
   \n
-
   ${renderLicenseBadge(data.license)}
-
   \n 
-
   ## Description
   ${data.description}
-
   \n 
-
   ## Table of Contents
   - [Installatoin](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
-  
   \n 
-
   ## Installation
   \n
   Information on installation: 
   \n
   ${data.installation}
-
   \n 
-  
   ## Usage
   \n 
-  User Information: 
+  Usage Information: 
  ${data.usage}
-
  \n 
-
-
   ## Contributing
   \n
   If you would like to contribute to this repository, follow these instructions: 
   \n
   ${data.Contributing}
-
   \n 
-
   ## Tests
   ${data.test}
-
   \n 
- 
-
   ## Questions
   Any questions about this project please contact the creator ${data.username} at:
   ${data.email}
   \n
   Check out other repositories by this creator at: https://github.com/${data.username}
-
   \n
-
   ${renderLicenseSection(data.license)}
   \n 
   ${renderLicenseLink(data.license)}

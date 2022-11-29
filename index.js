@@ -8,6 +8,7 @@ const generateMarkDown = require("./utils/generateMarkdown.js");
 const questions = [
 
     // enter user name
+
     {
         type: 'input',
         name: 'username',
@@ -47,8 +48,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Which command should be used to install dependancies: ',
-        default: 'npm i'
+        message: 'Enter information on how to install dependancies: ',
     },
 
     // usage information
@@ -69,7 +69,7 @@ const questions = [
     {
         type: 'input',
         name: 'test',
-        message: 'What are instructions for testing this application: ',
+        message: 'What are instructions for testing this application?: ',
     }
 
 ];
@@ -87,13 +87,30 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
+    console.log(`
+    Hello, and welcome to the README Generator
+
+    To create your Professional README, 
+    please read all of the prompts,
+    follow all of the instructions,
+    and answer all questions with your thorough professional responses.
+    If you do not enter any text, the section will still generate.
+    All sections and inputs can be edited after creation
+                     or
+    If you would like to exit and start over hit "ctrl & c"
+
+    Thank You
+
+    `)
+
     inquirer
+       
         .prompt(questions)
         .then((data) => {
             const dataObject = generateMarkDown(data);
 
             // file name, then Data to be added to file
-            writeToFile(data.projectName+"README.md", dataObject);
+            writeToFile(data.projectName + "README.md", dataObject);
         });
 }
 
